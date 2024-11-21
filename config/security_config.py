@@ -4,4 +4,4 @@ class SecurityConfig:
     ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png']
     RATE_LIMIT_PERIOD = 60  # seconds
     MAX_REQUESTS_PER_PERIOD = 4  # requests per minute
-    MAX_DAILY_COST = 0.001  # $0.001 = 
+    MAX_DAILY_COST = 0.1  # $0.001 = 
