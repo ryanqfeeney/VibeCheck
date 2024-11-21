@@ -1,0 +1,47 @@
+# Environment and secrets - protect your API keys!
+.env
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Streamlit specific
+.streamlit/secrets.toml
+
+# Project specific
+# Ignore uploaded images and temp files
+uploads/
+temp/
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Logs
+*.log
+
+# local 
+.streamlit/
+.env
+.env.*
+!.env.example
+secrets.toml
