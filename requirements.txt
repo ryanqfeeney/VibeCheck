@@ -6,3 +6,4 @@ openai>=1.12.0
 python-dotenv>=1.0.0
 Pillow>=10.0.0
 pytesseract>=0.3.10
+tesseract-ocr>=4.1.1
