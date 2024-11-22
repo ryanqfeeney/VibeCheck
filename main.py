@@ -75,6 +75,10 @@ def check_password():
             del st.session_state["password"]  # Don't store password
         else:
             st.session_state["password_correct"] = False
+            # Clear the password field
+            st.session_state["password"] = ""
+            # Show error message
+            st.error("😕 Password incorrect. Please try again.")
 
     if "password_correct" not in st.session_state:
         # First run, show input for password
@@ -82,17 +86,19 @@ def check_password():
             "Password", 
             type="password", 
             on_change=password_entered, 
-            key="password"
+            key="password",
+            placeholder="Enter password to access the app"
         )
         return False
     
+    # Return True if the password is correct
     return st.session_state["password_correct"]
 
 def main():
     st.markdown("<h1 class='main-header'>🎭 Vibe Check</h1>", unsafe_allow_html=True)
     
     if not check_password():
-        st.stop()
+        st.stop()  # Don't run the rest of the app
     
     # Initialize session state
     if 'user_id' not in st.session_state:
