@@ -8,6 +8,7 @@ from models import VibeAnalyzer
 from utils.security import RateLimiter
 from utils.validators import validate_file
 from config.security_config import SecurityConfig
+import os
 
 # Load environment variables
 load_dotenv()
@@ -20,8 +21,17 @@ st.set_page_config(
     page_title="Vibe Check",
     page_icon="🎭",
     layout="centered",  # Changed from "wide" to "centered" for better mobile display
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
 )
+
+# Add this immediately after set_page_config
+if 'STREAMLIT_SERVER_PORT' not in os.environ:
+    os.environ['STREAMLIT_SERVER_PORT'] = '8501'
 
 # Add this CSS for better mobile responsiveness
 st.markdown("""
