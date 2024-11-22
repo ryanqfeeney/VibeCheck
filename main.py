@@ -86,8 +86,7 @@ def check_password():
             "Password", 
             type="password", 
             on_change=password_entered, 
-            key="password",
-            placeholder="Enter password to access the app"
+            key="password"
         )
         return False
     
