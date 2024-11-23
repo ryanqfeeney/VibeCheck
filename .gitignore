@@ -31,10 +31,6 @@ Thumbs.db
 # Ignore uploaded images and temp files
 uploads/
 temp/
-*.jpg
-*.jpeg
-*.png
-*.gif
 
 # Logs
 *.log
