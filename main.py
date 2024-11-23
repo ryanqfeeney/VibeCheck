@@ -37,16 +37,16 @@ if 'STREAMLIT_SERVER_PORT' not in os.environ:
 st.markdown("""
 <style>
     .stApp {
-        max-width: 100vw;
-        overflow-x: hidden;
+        background-color: #1E3D59;  /* Dark blue background */
     }
     .main-header {
         font-size: clamp(1.5em, 5vw, 2.5em);
         text-align: center;
         padding: 1rem 0;
+        color: white;  /* White text for contrast */
     }
     .stTextArea textarea {
-        font-size: 16px !important;  /* Prevents zoom on iOS */
+        font-size: 16px !important;
     }
     .uploadedFile {
         max-width: 100%;
