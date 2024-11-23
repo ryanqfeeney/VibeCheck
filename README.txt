@@ -46,3 +46,4 @@ focused interface. Get quick insights into the emotional tone and dynamics of yo
 ## 🌐 Live Demo
 
 https://vibecheckapp.streamlit.app/
+text or email me for the password to access the app
