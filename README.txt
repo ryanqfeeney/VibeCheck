@@ -1,6 +1,7 @@
 # 🎭 Vibe Check
 
-A streamlined AI tool that combines OCR capabilities with conversation analysis in an efficient, focused interface. Get quick insights into the emotional tone and dynamics of your communications.
+A streamlined AI tool that combines OCR capabilities with conversation analysis in an efficient, 
+focused interface. Get quick insights into the emotional tone and dynamics of your communications.
 
 ## 🚀 Key Features
 
