@@ -134,7 +134,7 @@ def main():
             st.error(error)
         else:
             image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image", use_column_width=True)
+            st.image(image, use_container_width=True)
             text_input = pytesseract.image_to_string(image)
             st.text_area(
                 "Extracted Text (edit if needed):", 

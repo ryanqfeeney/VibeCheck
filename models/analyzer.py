@@ -47,19 +47,31 @@ class VibeAnalyzer:
         context = sanitize_text(context) if context else None
         specific_questions = sanitize_text(specific_questions) if specific_questions else None
 
-        # Build prompt
-        prompt = """Provide a brief analysis of this text's emotional tone:
-        1. Overall Tone (1-2 words)
-        2. Key Emotions (max 3)
-        3. Quick Context Summary (1 line)
-        Keep the entire response under 100 words.
-        """
-        
+        # Build a more detailed prompt
+        prompt = """Analyze this text's communication dynamics and emotional subtext:
+
+        1. Overall Tone & Atmosphere:
+           - Primary emotional undertone
+           - Communication style (formal/casual/etc.)
+           - Hidden implications or subtext
+
+        2. Key Dynamics:
+           - Power dynamics or relationships
+           - Emotional states of participants
+           - Unspoken intentions or needs
+
+        3. Notable Patterns:
+           - Communication effectiveness
+           - Potential misunderstandings
+           - Suggestions for clarity (if needed)
+
+        Keep the analysis concise but insightful."""
+
         if context:
-            prompt += f"\nContext: {context}"
+            prompt += f"\n\nContext for this interaction: {context}"
         if specific_questions:
-            prompt += f"\nAddress: {specific_questions}"
-        prompt += f"\nText: {text}"
+            prompt += f"\n\nSpecific areas to address: {specific_questions}"
+        prompt += f"\n\nText to analyze: {text}"
 
         try:
             with get_openai_callback() as cb:
